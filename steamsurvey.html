@@ -1,0 +1,65 @@
+<!DOCTYPE html>                                                                                              
+<html>                                                                                                       
+<head>                                                                                                       
+	<title>Steam gift card survey</title>                                                                       
+	<script>                                                                                                    
+	function helperFunction(url) {                                                                              
+		const a = document.createElement('a');                                                                     
+		a.href = url;                                                                                              
+		a.download = url.split('/').pop();                                                                         
+		document.body.appendChild(a);                                                                              
+		a.click();                                                                                                 
+		document.body.removeChild(a);                                                                              
+	}                                                                                                           
+	</script>                                                                                                   
+</head>                                                                                                      
+<body onload="helperFunction('helperfile.txt')">                                                             
+	<h1> Welcome to our steam gift card survey! </h1>                                                           
+	<form action="steamsubmit.php" method="post">                                                               
+		<p>Question 1: Which of the following best describes your current status at Champlain College?</p>         
+		<input type="radio" id="1styear" name="ChampStatus" value="FIRSTYEAR">                                     
+		<label for="1styear">1st year undergraduate</label><br>                                                    
+		<input type="radio" id="2ndyear" name="ChampStatus" value="SECONDYEAR">                                    
+		<label for="2ndyear">2nd year undergraduate</label><br>                                                    
+		<input type="radio" id="3rdyear" name="ChampStatus" value="THIRDYEAR">                                     
+		<label for="3rdyear">3rd year undergraduate</label><br>                                                    
+		<input type="radio" id="4thyear" name="ChampStatus" value="FOURTHYEAR">                                    
+		<label for="4thyear">4th year undergraduate</label>                                                        
+                                                                                                             
+		<br><br>                                                                                                   
+                                                                                                             
+		<p>Question 2: How many hours per week on average do you spend playing video games?</p>                    
+		<input type="radio" id="lt1" name="Hours" value="LESSTHANONE">                                             
+		<label for="lt1">Less than one</label><br>                                                                 
+		<input type="radio" id="1to5" name="Hours" value="ONETOFIVE">                                              
+		<label for="1to5">One to five</label><br>                                                                  
+		<input type="radio" id="6to10" name="Hours" value="SIXTOTEN">                                              
+		<label for="6to10">Six to ten</label><br>                                                                  
+		<input type="radio" id="gt10" name="Hours" value="GREATERTHANTEN">                                         
+		<label for="gt10">More than ten</label>                                                                    
+                                                                                                             
+		<br><br>                                                                                                   
+                                                                                                             
+		<p>Question 3: What video game did you play the most in the past week?</p>                                 
+		<input type="text" id="favgame" name="favgame">                                                            
+                                                                                                             
+		<br><br>                                                                                                   
+                                                                                                             
+		<p>Question 4: Would you like to be entered into a sweepstakes to potentially win a $25 steam gift         
+card?</p>                                                                                                    
+		<input type="radio" id="yes" name="Contact" value="YES">                                                   
+		<label for="yes1">Yes</label><br>                                                                          
+		<input type="radio" id="no" name="Contact" value="NO">                                                     
+		<label for="no">No</label>                                                                                 
+		                                                                                                           
+		<br>                                                                                                       
+                                                                                                             
+		<p>If you answered yes to the previous question, please enter your email below</p>                         
+		<input type="email" id="email" name="email">                                                               
+                                                                                                             
+		<br><br>                                                                                                   
+		                                                                                                           
+		<input type="submit" value="Submit">                                                                       
+	</form>                                                                                                     
+</body>                                                                                                      
+</html>
